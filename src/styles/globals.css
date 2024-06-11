@@ -3,23 +3,15 @@
 @import "tailwindcss/utilities";
 
 ::-webkit-scrollbar{
-  width: 10px;
+  display: none;
+  scrollbar-color: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(90, 90, 90);
-  cursor: pointer;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
 
 /* html, body, heading */
 @layer base {
   body {
-    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600;
+    @apply bg-[#141414] text-white !scrollbar !scrollbar-thumb-red-600 overflow-x-hidden;
   }
 
   header {
@@ -36,6 +28,11 @@
   .bannerButton{
     @apply flex items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition
     hover:opacity-75 md:py-2.5 md:px-8 md:text-xl; 
+  }
+
+  .input{
+    @apply w-full rounded bg-[#333] px-5 py-3.5 placeholder-[gray] outline-none 
+    focus:bg-[#454545];
   }
 }
 

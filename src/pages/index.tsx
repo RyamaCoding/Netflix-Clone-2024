@@ -29,7 +29,7 @@ const Home = ({
 }: Props) => {
   return (
     <div
-      className="relative h-screen bg-gradient-to-b lg:h-[140vh] overflow-hidden"
+      className="relative h-screen bg-gradient-to-b lg:h-[140vh] "
     >
       <Head>
         <title>Home</title>
